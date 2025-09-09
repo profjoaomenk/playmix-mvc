@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Playmix - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #F4F6FF;
+            color: #333333;
+            font-family: 'Roboto', sans-serif;
+        }
+        .content {
+            flex: 1;
+        }
+        .option-card {
+            background: linear-gradient(to right, #FF4F81, #3A7BD5);
+            border-radius: 12px;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #ffffff;
+        }
+        .option-card:hover {
+            transform: scale(1.05);
+            background: linear-gradient(to right, #FF4F81, #3A7BD5);
+        }
+        .option-icon {
+            font-size: 4rem;
+            color: #ffffff;
+        }
+        .option-card p {
+            color: #ffffff;
+        }
+        .option-card a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .option-card a:hover {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .option-card h3 {
+            color: #ffffff;
+        }
+        .welcome-title {
+            font-size: 3rem;
+            background: linear-gradient(to right, #E90074, #4C3BCF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .welcome-title span {
+            font-size: 4rem;
+            vertical-align: middle;
+        }
+        .welcome-subtitle {
+            font-size: 1.5rem;
+            color: #333333;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Incluir o fragmento do header -->
+<header th:insert="~{fragments/header :: header}"></header>
+
+<!-- Seção Principal -->
+<main class="container mt-5 content">
+    <!-- Frase de boas-vindas -->
+    <div class="row">
+        <div class="col-12">
+            <h1 class="welcome-title">Bem-vindo ao Playmix <span>🎧</span></h1>
+            <p class="welcome-subtitle">Sua experiência musical personalizada começa aqui</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <!-- Gerenciar Músicas -->
+        <div class="col-md-5 mb-4">
+            <a href="#" th:href="@{/musics}" class="text-decoration-none">
+                <div class="card option-card text-center p-4">
+                    <i class="fas fa-music option-icon mb-3"></i>
+                    <h3>Gerenciar Músicas</h3>
+                    <p>Adicione, remova e gerencie suas músicas.</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Gerenciar Playlists -->
+        <div class="col-md-5 mb-4">
+            <a href="#" th:href="@{/playlists}" class="text-decoration-none">
+                <div class="card option-card text-center p-4">
+                    <i class="fas fa-list option-icon mb-3"></i>
+                    <h3>Gerenciar Playlists</h3>
+                    <p>Crie, edite e organize suas playlists favoritas.</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</main>
+
+<!-- Incluir o fragmento do footer -->
+<footer th:insert="~{fragments/footer :: footer}"></footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

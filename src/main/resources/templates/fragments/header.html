@@ -1,0 +1,41 @@
+<!-- fragments/header.html -->
+<header th:fragment="header" xmlns:th="http://www.thymeleaf.org">
+    <style>
+        .navbar {
+            background: linear-gradient(to right, #E90074, #4C3BCF);
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .navbar-brand:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Playmix</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" th:href="@{/}" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/playlists}" href="#">Playlists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/musics}" href="#">Músicas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

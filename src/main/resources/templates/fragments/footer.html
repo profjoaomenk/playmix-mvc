@@ -1,0 +1,28 @@
+<!-- fragments/footer.html -->
+<footer th:fragment="footer" class="footer text-center py-4" xmlns:th="http://www.thymeleaf.org">
+    <style>
+        .footer {
+            background: linear-gradient(to right, #E90074, #4C3BCF);
+            color: #ffffff;
+        }
+        .social-icons {
+            margin: 10px 0;
+        }
+        .social-icons a {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #ffffff;
+            margin: 0 10px;
+            transition: color 0.2s; 
+        }
+        .social-icons a:hover {
+            color: #808080; 
+        }
+    </style>
+    <p>
+        &copy; 2024 Playmix. Todos os direitos reservados.
+    </p>
+    <div class="social-icons">
+        <a href="https://github.com/laiscrz/playmix-application-mvc" target="_blank" class="fab fa-github"></a>
+    </div>
+</footer>
